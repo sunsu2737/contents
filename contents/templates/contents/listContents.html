@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html" ; charset=UTF-8>
+    <title>컨텐츠</title>
+
+</head>
+
+<body>
+
+    {% if contents_list %}
+    {%for s in contents_list %}
+    <center>
+        <a href="{{s.contents_url}}"><img src="{{s.contents_image}}" width="500" height="300"></a></br>
+        {{s.contents_name }}</br></br></br>
+    </center>
+
+    {% endfor %}
+    {% else %}
+    <p>no contents</p>
+    {% endif %}
+
+</body>
+
+</html>
